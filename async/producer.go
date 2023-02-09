@@ -13,6 +13,7 @@ import (
 )
 //sync 异步发送 producer可以不用管broker的返回结果就可以直接发送下一条消息
 //producer直接调用回调函数来检测消息发送是否成功
+//consumer接收消息还是一样的
 func asyncProducer() {
 	pro, err := rocketmq.NewProducer(
 		producer.WithGroupName("test_producer"),
